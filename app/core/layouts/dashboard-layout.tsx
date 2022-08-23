@@ -86,7 +86,7 @@ const NavItem: React.FC<NavItemProps> = (props) => {
           current
             ? "bg-secondary-light text-secondary-default border-r-4 border-secondary-default"
             : "text-primary-light hover:text-white hover:bg-primary-mid",
-          "group flex items-center px-2 py-3 text-sm leading-6 font-medium"
+          "group flex items-center px-5 py-3 text-sm leading-6 font-medium"
         )}
         aria-current={current ? "page" : undefined}
       >
@@ -106,8 +106,8 @@ const NavItem: React.FC<NavItemProps> = (props) => {
 
 const LogoutButton: React.FC = () => {
   return (
-    <div className="flex-shrink-0 flex px-2">
-      <button className="group flex items-center px-2 py-2 text-sm leading-6 font-medium bold rounded-md w-full text-primary-light hover:text-white hover:bg-primary-mid">
+    <div className="flex-shrink-0 flex">
+      <button className="group flex items-center px-5 py-3 text-sm leading-6 font-medium bold w-full text-primary-light hover:text-white hover:bg-primary-mid">
         <Icon
           name="logout"
           className={classNames("text-primary-light", "mr-4 flex-shrink-0 h-6 w-6 ")}
