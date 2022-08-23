@@ -1,12 +1,11 @@
 import { Suspense } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
-import logo from "public/logo.png"
 import { useMutation } from "@blitzjs/rpc"
 import { Routes, BlitzPage } from "@blitzjs/next"
+import DashboardLayout from "@layouts/dashboard-layout"
 
 const UserInfo = () => {
   const currentUser = useCurrentUser()
@@ -50,17 +49,11 @@ const UserInfo = () => {
 
 const Home: BlitzPage = () => {
   return (
-    <Layout title="Home">
-      <div className="container">
-        <main>
-          <div className="buttons" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
-            <Suspense fallback="Loading...">
-              <UserInfo />
-            </Suspense>
-          </div>
-        </main>
-      </div>
-    </Layout>
+    <DashboardLayout title="Home">
+      <Suspense fallback="Loading...">
+        <UserInfo />
+      </Suspense>
+    </DashboardLayout>
   )
 }
 

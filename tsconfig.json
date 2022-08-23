@@ -19,7 +19,10 @@
     "incremental": true,
     "tsBuildInfoFile": ".tsbuildinfo",
     "paths": {
-      "@components/*": ["app/core/*", "app/auth/*", "app/users/*"]
+      "@components/*": ["app/core/components/*", "app/auth/components/*", "app/users/components/*"],
+      "@assets/*": ["assets/*"],
+      "@utils/*": ["app/utils/*"],
+      "@layouts/*": ["app/core/layouts/*"]
     }
   },
   "exclude": ["node_modules", "**/*.e2e.ts", "cypress"],
