@@ -84,9 +84,9 @@ const NavItem: React.FC<NavItemProps> = (props) => {
         key={label}
         className={classNames(
           current
-            ? "bg-secondary-light text-secondary-default"
+            ? "bg-secondary-light text-secondary-default border-r-4 border-secondary-default"
             : "text-primary-light hover:text-white hover:bg-primary-mid",
-          "group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md"
+          "group flex items-center px-2 py-2 text-sm leading-6 font-medium"
         )}
         aria-current={current ? "page" : undefined}
       >
@@ -184,7 +184,7 @@ const DashboardLayout: BlitzLayout<{ title?: string; children?: React.ReactNode 
                     className="mt-5 flex-shrink-0 h-full divide-y divide-primary-mid overflow-y-auto"
                     aria-label="Sidebar"
                   >
-                    <div className="px-2 space-y-1">
+                    <div className="space-y-1">
                       {navigation.map((item) => (
                         <NavItem
                           key={item.label}
@@ -196,7 +196,7 @@ const DashboardLayout: BlitzLayout<{ title?: string; children?: React.ReactNode 
                       ))}
                     </div>
                     <div className="mt-6 pt-6">
-                      <div className="px-2 space-y-1">
+                      <div className="space-y-1">
                         {secondaryNavigation.map((item) => (
                           <NavItem
                             key={item.label}
@@ -245,7 +245,7 @@ const DashboardLayout: BlitzLayout<{ title?: string; children?: React.ReactNode 
               className="mt-5 flex-1 flex flex-col divide-y divide-primary-mid overflow-y-auto"
               aria-label="Sidebar"
             >
-              <div className="px-2 space-y-1">
+              <div className="space-y-1">
                 {navigation.map((item) => (
                   <NavItem
                     key={item.label}
@@ -257,7 +257,7 @@ const DashboardLayout: BlitzLayout<{ title?: string; children?: React.ReactNode 
                 ))}
               </div>
               <div className="mt-6 pt-6">
-                <div className="px-2 space-y-1">
+                <div className="space-y-1">
                   {secondaryNavigation.map((item) => (
                     <NavItem
                       key={item.label}
